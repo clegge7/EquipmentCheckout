@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/fullcalendarcss")
+    @Scripts.Render("~/bundles/modernizr")
+    <style type="text/css">
+
+        body {
+            background-color: #D6D3C4;
+        }
+
+        h1 {
+            font-family: 'Noto Sans', sans-serif;
+            text-align: center;
+        }
+
+        h2 {
+            font-family: 'Noto Sans', sans-serif;
+        }
+
+        a {
+            color: black;
+        }
+
+        .navbar-fixed-top {
+            background-color: #500000;
+        }
+
+        .jumbotron {
+            margin-top: 10px;
+            background-color: #500000;
+        }
+
+        .border {
+            border-top: solid #FFFFFF;
+            margin-top: 10px;
+            color: #FFFFFF;
+        }
+
+        .text {
+            margin-top: 10px;
+            color: #FFFFFF;
+            font-family: 'Open Sans Condensed', sans-serif;
+        }
+
+        .explanation {
+            font-family: 'Noto Sans', sans-serif;
+        }
+
+        .btn {
+            color: #500000;
+            border: solid;
+            background-color: #D6D3C4;
+        }
+
+    </style>
+</head>
+
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" style="border:none">
+                    <i class="fa fa-angle-double-down" style="font-size:36px; color: white"></i>
+                </button>
+                @Html.ActionLink("Equipment Checkout", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Checkouts", "Index", "Equipments")</li>
+                    <li>@Html.ActionLink("Calendar", "Calendar", "Equipments")</li>
+                    <li>@Html.ActionLink("Upload", "Upload", "Equipments")</li>
+                    <li>@Html.ActionLink("Login", "Login", "Home")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - By Nobody in Particular</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/fullcalendarjs")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

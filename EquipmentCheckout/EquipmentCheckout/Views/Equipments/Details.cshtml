@@ -1,0 +1,76 @@
+﻿@model EquipmentCheckout.Models.Equipment
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Equipment</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Incident)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Incident)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.User)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Location)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Location)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CheckoutDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CheckoutDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReturnDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReturnDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EquipmentCheckedOut)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EquipmentCheckedOut)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExtraInfo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExtraInfo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Delete", "Delete", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
